@@ -40,8 +40,6 @@ for e in alumnos:
 for c,v in alumnos.items():
     print(c,v)
 
-
-
 #b) Imprime el promedio de María.
 print(alumnos["María"]["promedio"])
 
@@ -53,9 +51,19 @@ for e in alumnos:
         print("Edades que tienen 20 y 22",e)
 #5. Dado el siguiente diccionario:
 empleados = {"Juan": {"departamento": "Ventas", "sueldo": 1500}, "María": {"departamento": "Contabilidad", "sueldo": 1800}, "Pedro": {"departamento": "Ventas", "sueldo": 1700}, "Ana": {"departamento": "Recursos Humanos", "sueldo": 1900}}
+
 #a) Imprime el sueldo de Pedro.
+print(empleados["Pedro"]["sueldo"])
+
 #b) Cambia el sueldo de Ana a 2000.
+empleados["Ana"]["sueldo"] = 2000
+
 #c) Crea un nuevo diccionario con los empleados del departamento de Ventas.
+empleados_ventas = {}
+for nombre, datos in empleados.items():
+    if datos["departamento"] == "Ventas":
+        empleados_ventas[nombre] = datos
+
 #6.Dado el siguiente diccionario:
 #a) Imprime las materias en las que está inscrito Pedro.
 #b) Agrega una materia más a la lista de materias de María: "Programación".
